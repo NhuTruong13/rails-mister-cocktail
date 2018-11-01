@@ -1,0 +1,9 @@
+<h1> Welcome to the cocktail bar ! </h1>
+
+<p> Here is the list of the cocktails available: </p>
+<p> <% @cocktails.each do |cocktail|  %> </p>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <% end %>
+<p> </p>
+<p> <%= link_to "Want to add a new cocktail ?", new_cocktail_path, class: "btn btn-primary"  %>
+</p>
