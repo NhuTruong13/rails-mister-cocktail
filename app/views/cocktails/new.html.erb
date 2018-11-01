@@ -1,5 +1,9 @@
-<p> </p>
-<%= simple_form_for [@cocktail] do |f| %>
-<p> <%= f.input :name %> </p>
-<p> <%= f.submit "Let's create this crazy cocktail !", class: "btn btn-primary" %> </p>
-<% end %>
+<p> <div class= "col-xs-6  col-sm-3"> </p>
+  <%= simple_form_for [@cocktail] do |f| %>
+  <p> <%= f.input :name %> </p>
+  <p> <%= f.submit "Let's create this crazy cocktail !", class: "btn btn-primary" %> </p>
+  <% end %>
+  <p> <%= link_to "Back to all cocktails", cocktails_path %> </p>
+</div>
+
+

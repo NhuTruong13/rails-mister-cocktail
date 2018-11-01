@@ -1,9 +1,13 @@
-<h1> Welcome to the cocktail bar ! </h1>
+<h1> TOP 5 Glamorous Cocktails that you should try ! </h1>
 
-<p> Here is the list of the cocktails available: </p>
-<p> <% @cocktails.each do |cocktail|  %> </p>
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+<p> <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary"  %>
+
+<ul>
+   <% @cocktails.each do |cocktail|  %>
+   <li>
+    <h2> <%= link_to cocktail.name, cocktail_path(cocktail) %> </h2>
+    <%= link_to "Remove cocktail", cocktail_path(cocktail), method: :delete %>
     <% end %>
+    </li>
 <p> </p>
-<p> <%= link_to "Want to add a new cocktail ?", new_cocktail_path, class: "btn btn-primary"  %>
-</p>
+</ul>
