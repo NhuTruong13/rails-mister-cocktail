@@ -2,7 +2,10 @@
 <%= simple_form_for [@cocktail, @dose] do |f|  %>
 <p> <%= f.input :description %> </p>
 <p> <%= f.association :ingredient, collection: @ingredients %> </p>
-<p> <%= f.submit "Confirm" %> </p>
+<p> <%= f.submit "Add other ingredient" %> </p>
 <% end %>
+
+<p> <%= link_to "Cocktail Ready! Back to Cocktails", cocktails_path %> </p>
+
 
 

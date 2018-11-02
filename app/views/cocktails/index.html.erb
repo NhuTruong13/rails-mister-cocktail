@@ -1,13 +1,26 @@
-<h1> TOP 5 Glamorous Cocktails that you should try ! </h1>
 
-<p> <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary"  %>
+ <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://www.thespruceeats.com/thmb/p5a8R8k3UcmnflyaMDGeaTUKkiw=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cohen-manhattan-5a8f33e70e23d900371231bc-5af9f8bb30371300376b9445.jpg');">
+      <div class="banner-content">
+        <h1>The best glamorous cocktails</h1>
+        <p> </p>
+        <a class="btn btn-primary btn-lg">Discover</a>
+      </div>
+</div>
 
-<ul>
-   <% @cocktails.each do |cocktail|  %>
-   <li>
-    <h2> <%= link_to cocktail.name, cocktail_path(cocktail) %> </h2>
-    <%= link_to "Remove cocktail", cocktail_path(cocktail), method: :delete %>
-    <% end %>
-    </li>
-<p> </p>
-</ul>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <ul>
+         <% @cocktails.each do |cocktail|  %>
+         <li>
+          <h2> <%= link_to cocktail.name, cocktail_path(cocktail) %> </h2>
+          <%= link_to "Remove cocktail", cocktail_path(cocktail), method: :delete, data:{confirm: "Are you sure?"} %>
+          <% end %>
+          </li>
+      <p> </p>
+      </ul>
+    </div>
+  </div>
+</div>
